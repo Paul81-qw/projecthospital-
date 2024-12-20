@@ -291,9 +291,45 @@ select{
     .nav-content{
         width: calc(100% - 30px);
     }
-    .nav-right{
-        display: none;
+    label{
+        display: block;
+        font-size: 1.3rem;
+        color: #034e52;
+        font-weight: 900;
     }
+    .nav-right{
+        position: absolute;
+    width: 340px;
+    padding: 1.8rem;
+    top: 4.4rem;
+    right: 3px;
+    z-index: 1;
+    background-color: #91b2ac;
+    opacity: .97;
+    border-bottom: 4px solid #094c3b;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    .nav-items {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .nav-items > a {
+        width: 100%;
+        color: #094c3b;
+        font-size: 18px;
+        padding: 0.6rem;
+        text-align: right;
+        border-bottom: 4px solid #fff;
+      }
+
+      #toggle:checked + .nav-right {
+        display: block;
+        transform: none;
+      }
     .hero-sec{
         background: #034e52;
     }
